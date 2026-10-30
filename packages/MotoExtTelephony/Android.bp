@@ -4,15 +4,21 @@
 //
 
 android_app {
-    name: "MotoNrEnabler",
+    name: "MotoExtTelephony",
 
     srcs: [
         "src/**/*.aidl",
         "src/**/*.kt",
+    ],
+    resource_dirs: [
+        "res",
     ],
     libs: ["telephony-common"],
 
     certificate: "platform",
     platform_apis: true,
     system_ext_specific: true,
+    static_libs: [
+        "org.lineageos.settings.resources",
+    ],
 }
